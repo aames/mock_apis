@@ -1,0 +1,16 @@
+GET for any value (JSON) is handled by any.get.json
+curl -i -H "Accept: application/json" -X GET http://127.0.0.1:3000/content/foo
+
+POST for any value (JSON) is handled by any.post.json
+curl -i -H "Accept: application/json" -X POST -d "token" http://127.0.0.1:3000/content/foo
+
+GET for application/HTML is handled by index.get.html
+curl -i -H "Accept: application/html" -X GET http://127.0.0.1:3000/content
+
+  (Show it filters on header = returns a 404 because application/json is not application/html)
+curl -i -H "Accept: application/json" -X GET http://127.0.0.1:3000/content
+
+
+POST for different status code - handle filtering in any.post.json
+curl -i -H "Accept: application/json" -X POST -d "Wrong" http://127.0.0.1:3000/content/bar
+curl -i -H "Accept: application/json" -X POST -d "Password" http://127.0.0.1:3000/content/bar

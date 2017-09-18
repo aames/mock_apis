@@ -1,0 +1,7 @@
+//! statusCode: 201, contentType: "application/json"
+//! body: Password
+{ "Token": "fubar" }
+
+//! statusCode: 404
+//! body: Wrong
+{ "Error": "Not Found" }
