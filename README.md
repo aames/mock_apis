@@ -29,12 +29,16 @@ Following the structure shown here, along with the documentation available at [c
 Need more docs/examples?
 
 official docs: http://sideshowcoder.github.io/canned/
+
 and more examples here: https://github.com/sideshowcoder/canned/blob/master/spec/test_responses/
 
 ## Worked example
 Run `canned`
+
 Try it out for a GET:
+
   `curl -i -H "Accept: application/json" -X GET http://127.0.0.1:3000/content/foo`
+
  Should show:
 ```
     HTTP/1.1 200 OK
@@ -50,8 +54,11 @@ Try it out for a GET:
 ```
 
 Try it out for a POST:
+
   `curl -i -H "Accept: application/json" -X POST -d "token" http://127.0.0.1:3000/content/foo`
+
   Should show:
+
 ```
     HTTP/1.1 201 Created
     Content-Type: application/json
